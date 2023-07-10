@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout class="androidx.appcompat.app.AlertController$RecycleListView" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dbconnection">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dbconnectimage"
+        android:id="@+id/dbconnectimage"
+        android:layout_margin="0dp"
+        ></ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:id="@+id/linear1"
+        android:background="@drawable/topbg"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FABRIC MANAGEMENT SYSTEM"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATABASE CONNECTION"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/cyan"
+            android:fontFamily="@font/poppins"
+            android:padding="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:boxStrokeColor="@color/cyan"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/cyan"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/ipaddress"
+                android:hint="IP ADDRESS"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_margin="5dp"
+            app:boxStrokeColor="@color/cyan"
+            app:boxBackgroundColor="@color/white"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/cyan"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/portno"
+                android:hint="PORT NUMBER"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:boxStrokeColor="@color/cyan"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@color/cyan"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/username"
+                android:hint="USERNAME"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:errorEnabled="true"
+            app:boxStrokeColor="@color/cyan"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@color/cyan"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/password"
+                android:hint="PASSWORD"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/connectdbbutton"
+            android:text="Connect DB"
+            style="@style/ButtonStyle"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

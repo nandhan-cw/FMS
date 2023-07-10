@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Front Red Point"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Defect"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins"
+        android:padding="10dp"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:autofillHints="Select barcode number"
+        android:background="@drawable/blackbutton"
+        android:id="@+id/defectspinner"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Defect Point"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins"
+        android:padding="10dp"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:autofillHints="Select barcode number"
+        android:background="@drawable/blackbutton"
+        android:id="@+id/pointSpinner"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Point"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:autofillHints="Select barcode number"
+        android:layout_margin="10dp"
+        android:background="@drawable/blackbutton"
+        android:id="@+id/pointText"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/cyan"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>

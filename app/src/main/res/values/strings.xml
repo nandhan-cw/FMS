@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FMS</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="DefectsList">
+        <item>Weaving Defect</item>
+        <item>Yarn Defect</item>
+        <item>Printing Defect</item>
+        <item>Dyeing Defect</item>
+        <item>Oil and Other Stains</item>
+        <item>Design Defect</item>
+        <item>Coating Defect</item>
+        <item>Holes, Cut and Tear</item>
+    </string-array>
+
+    <string-array name="PointList">
+        <item>Upto 3 Inch</item>
+        <item>3 to 6 Inch</item>
+        <item>6 to 9 Inch</item>
+        <item>Above 9 Inch</item>
+    </string-array>
+
+</resources>

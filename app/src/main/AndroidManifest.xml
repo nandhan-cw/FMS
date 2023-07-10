@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FMS"
+        tools:targetApi="31">
+        <activity
+            android:name=".Example"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".WidthFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".RejectFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".RackDetailsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".RackAllotFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".RackToRackFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".InspectFormActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".DeliveryForm"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".Login"
+            android:exported="false"
+            android:theme="@style/AppTheme.Example" />
+        <activity
+            android:name=".Dbconnection"
+            android:exported="true"
+            android:theme="@style/AppTheme.Example">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>
