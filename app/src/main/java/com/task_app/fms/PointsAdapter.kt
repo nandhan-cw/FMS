@@ -3,12 +3,11 @@ package com.task_app.fms
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
-class PointsAdapter(private val defectList: ArrayList<Points>): RecyclerView.Adapter<PointsAdapter.MyViewHolder>() {
+class PointsAdapter(private val defectList: ArrayList<Points>,private val pointInterface: PointInterface): RecyclerView.Adapter<PointsAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType:Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.pointitem,parent,false)
@@ -20,7 +19,9 @@ class PointsAdapter(private val defectList: ArrayList<Points>): RecyclerView.Ada
         holder.defect.text= current.defect
         holder.defectPoint.text= current.defectPoint
         holder.point.text= current.point
-
+        holder.delete.setOnClickListener{
+            pointInterface.deleteitem(position)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -31,6 +32,9 @@ class PointsAdapter(private val defectList: ArrayList<Points>): RecyclerView.Ada
         val defect: TextView = itemView.findViewById(R.id.defect)
         val defectPoint: TextView = itemView.findViewById(R.id.defectpoint)
         val point: TextView = itemView.findViewById(R.id.point)
+        val delete:ImageView = itemView.findViewById(R.id.delete)
     }
+
+
 
 }

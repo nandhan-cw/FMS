@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.view.Window
@@ -37,7 +38,7 @@ import kotlin.math.roundToInt
 
 private const val CAMERA_REQUEST_CODE=101
 
-class InspectFormActivity : AppCompatActivity() {
+class InspectFormActivity : AppCompatActivity(),PointInterface {
     lateinit var QRResult: String
     var PreQrResult: String = ""
 
@@ -72,6 +73,29 @@ class InspectFormActivity : AppCompatActivity() {
         fabButton.setOnClickListener {
             showCustomDialogBox();
         }
+
+        comMtr.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+            override fun afterTextChanged(s: Editable?) {
+                val text: String = s.toString()
+                findtotalpoint()
+            }
+        })
+
+        width.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+            override fun afterTextChanged(s: Editable?) {
+                val text: String = s.toString()
+                findtotalpoint()
+            }
+        })
+
         recyclerview.layoutManager = LinearLayoutManager(this)
         recyclerview.setHasFixedSize(true)
         newarraylist = arrayListOf<Points>()
@@ -80,12 +104,13 @@ class InspectFormActivity : AppCompatActivity() {
     }
 
     private fun getUserData(){
+
         newarraylist.clear()
         for (i in defectList.indices){
             val point = Points(defectList.get(i), defectpointList.get(i),pointList.get(i))
             newarraylist.add(point)
         }
-        recyclerview.adapter = PointsAdapter(newarraylist)
+        recyclerview.adapter = PointsAdapter(newarraylist,this@InspectFormActivity)
 
     }
 
@@ -243,4 +268,12 @@ class InspectFormActivity : AppCompatActivity() {
         dialog.show()
 
     }
+
+    override fun deleteitem(position: Int) {
+        defectList.removeAt(position)
+        defectpointList.removeAt(position)
+        pointList.removeAt(position)
+        getUserData()
+    }
+
 }
