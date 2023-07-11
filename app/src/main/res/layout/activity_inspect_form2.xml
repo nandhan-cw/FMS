@@ -183,7 +183,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/lastwidth"
                 style="@style/textstyle"
-                android:hint="Bale No"
+                android:hint="Bale No*"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -270,7 +270,11 @@
             </TableRow>
         </TableLayout>
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -314,7 +318,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/width"
-                android:hint="Width"
+                android:hint="Width*"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -339,7 +343,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Result*"
+            android:text="Result"
             android:textColor="@color/grey"
             android:textSize="15sp"
             android:fontFamily="@font/poppins"

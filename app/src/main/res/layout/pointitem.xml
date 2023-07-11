@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_height="50dp">
+    <TableRow>
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/poppins"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:background="@drawable/tablebg"
+            android:layout_weight="1"
+            android:id="@+id/defect"
+            />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:background="@drawable/tablebg"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:id="@+id/defectpoint"
+            />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/poppins"
+            android:background="@drawable/tablebg"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:id="@+id/point"
+            />
+
+    </TableRow>
+
+</TableLayout>
